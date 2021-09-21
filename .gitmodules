@@ -4,3 +4,6 @@
 [submodule "ducknet-cms"]
 	path = ducknet-cms
 	url = git@github.com:yoniaiz/ducknet-cms.git
+[submodule "ducknet-automation"]
+	path = ducknet-automation
+	url = git@github.com:yoniaiz/ducknet-automation.git

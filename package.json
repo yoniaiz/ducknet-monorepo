@@ -1,0 +1,39 @@
+{
+  "name": "the-ducknet",
+  "version": "1.0.0",
+  "description": "we have here a pointers to all the submodules ducknet and ducknet-cms",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all -p ducknet:dev cms:dev",
+    "build": "npm-run-all -p ducknet:build cms:build",
+    "start": "npm-run-all -p ducknet:start cms:build",
+    "test": "Cypress=true is-ci-cli test:e2e:run test:e2e:dev",
+    "ducknet:dev": "npm run dev --prefix ducknet",
+    "ducknet:build": "npm run build --prefix ducknet",
+    "ducknet:start": "npm start --prefix ducknet",
+    "cms:dev": "npm run develop --prefix ducknet-cms",
+    "cms:build": "NODE_ENV=production npm run build --prefix ducknet-cms",
+    "cms:start": "NODE_ENV=production npm start --prefix ducknet-cms",
+    "automation:open": "npm run cy:open --prefix ducknet-automation",
+    "automation:run": "npm run cy:run --prefix ducknet-automation",
+    "test:e2e:run": "start-server-and-test start http://localhost:3000 automation:run",
+    "test:e2e:dev": "start-server-and-test dev http://localhost:3000 automation:open",
+    "pretest:e2e:run": "npm run build"
+  },
+  "devDependencies": {
+    "is-ci-cli": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "start-server-and-test": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoniaiz/ducknet-monorepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoniaiz/ducknet-monorepo/issues"
+  },
+  "homepage": "https://github.com/yoniaiz/ducknet-monorepo#readme"
+}
