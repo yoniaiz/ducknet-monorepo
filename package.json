@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm-run-all -p ducknet:dev cms:dev",
     "build": "npm-run-all -p ducknet:build cms:build",
-    "start": "npm-run-all -p ducknet:start cms:build",
+    "start": "npm-run-all -p ducknet:start cms:start",
     "test": "Cypress=true is-ci-cli test:e2e:run test:e2e:dev",
     "ducknet:dev": "npm run dev --prefix ducknet",
     "ducknet:build": "npm run build --prefix ducknet",
