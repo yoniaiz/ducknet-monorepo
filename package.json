@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/yoniaiz/ducknet-monorepo/issues"
   },
-  "homepage": "https://github.com/yoniaiz/ducknet-monorepo#readme"
+  "homepage": "https://github.com/yoniaiz/ducknet-monorepo#readme",
+  "dependencies": {
+    "graphql": "^15.6.0"
+  }
 }
