@@ -1,0 +1,22 @@
+name: test-and-deploy
+on: [push]
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URI: ${{ secrets.MONGODB_URI }}
+      DATABASE_URL: ${{ secrets.MONGODB_URI }}
+      CMS_API: http://localhost:1337
+      NEXTAUTH_URL: http://localhost:3000
+      DATABASE_SRV: true
+      DATABASE_SSL: true
+      DATABASE_NAME: ducknet-cms
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node_version: 14
+      - name: install deps
+        run: npm run install-all
+      - name: run server&client integration + unit tests
+        run: npm run test
