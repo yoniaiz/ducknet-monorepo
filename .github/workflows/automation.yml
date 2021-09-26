@@ -17,6 +17,8 @@ jobs:
         with:
           node_version: 14
       - name: install deps
+        run: npm ci
+      - name: install all
         run: npm run install-all
       - name: run server&client integration + unit tests
         run: npm run test
