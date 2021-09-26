@@ -19,9 +19,9 @@
     "test:e2e:run": "start-server-and-test start http://localhost:3000 automation:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 automation:open",
     "pretest:e2e:run": "npm run build",
-    "automation:install": "npm install --prefix ducknet-automation",
-    "ducknet:install": "npm install --prefix ducknet",
-    "cms:install": "npm install --prefix ducknet-cms",
+    "automation:install": "npm --prefix ./ducknet-automation install ./ducknet-automation",
+    "ducknet:install": "npm --prefix ./ducknet install ./ducknet",
+    "cms:install": "npm --prefix ./ducknet-cms install ./ducknet-cms",
     "install-all": "npm-run-all -p cms:install ducknet:install automation:install"
   },
   "devDependencies": {
