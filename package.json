@@ -18,11 +18,7 @@
     "automation:run": "npm run cy:run --prefix ducknet-automation",
     "test:e2e:run": "start-server-and-test start http://localhost:3000 automation:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 automation:open",
-    "pretest:e2e:run": "npm run build",
-    "automation:install": "npm ci --prefix ducknet-automation",
-    "ducknet:install": "npm ci --prefix ducknet",
-    "cms:install": "npm ci --prefix ducknet-cms",
-    "install-all": "npm-run-all -p cms:install ducknet:install automation:install"
+    "pretest:e2e:run": "npm run build"
   },
   "devDependencies": {
     "is-ci-cli": "^2.2.0",
